@@ -6,7 +6,7 @@ const app = Vue.createApp({
     };
   },
   methods: {
-    message(event) {
+    message() {
       alert('Jopelines');
     },
     setTexto(event) {

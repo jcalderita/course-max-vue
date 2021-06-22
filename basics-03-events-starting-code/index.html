@@ -18,7 +18,7 @@
       <!-- <button @click="counter++">Add</button>
       <button @click="counter--">Remove</button> -->
       <button @click="add(5)">Add</button>
-      <button @click.right="remove(5)">Remove</button>
+      <button @click.right.prevent="remove(5)">Remove</button>
       <p v-once>Starting Counter: {{ counter }}</p>
       <p>Result: {{ counter }}</p>
       <!-- <input type="tex" @input="setName" /> -->

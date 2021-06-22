@@ -6,12 +6,12 @@ const app = Vue.createApp({
       confirmedName: '',
     };
   },
-  methods: {
+  _methods: {
     confirmInput() {
       this.confirmedName = this.name;
     },
     submitForm(event) {
-      // event.preventDefault();
+      //event.preventDefault();
       alert('Submitted');
     },
     add(val) {
@@ -20,11 +20,18 @@ const app = Vue.createApp({
     },
     remove(val) {
       // this.counter--;
+      // event.preventDefault();
       this.counter -= val;
     },
     setName(event, apellido) {
       this.name = event.target.value.concat(' ', apellido);
     },
+  },
+  get methods() {
+    return this._methods;
+  },
+  set methods(value) {
+    this._methods = value;
   },
 });
 
