@@ -9,7 +9,8 @@ const app = Vue.createApp({
   },
   methods: {
     outputFullname() {
-      return this.name === '' ? '' : this.name.concat(' ', 'Calderita');
+      // return this.name === '' ? '' : this.name.concat(' ', 'Calderita');
+      return this.name && this.name.concat(' ', 'Calderita');
     },
     setName(event, lastName) {
       this.name = event.target.value;
@@ -22,11 +23,12 @@ const app = Vue.createApp({
     },
     resetInput() {
       this.name = '';
+      this.lastName = '';
     },
   },
   computed: {
     fullname() {
-      console.log('calculando');
+      // console.log('calculando');
       return this.name === '' && this.lastName === '' ? '' : this.name.concat(' ', this.lastName);
     },
   },
